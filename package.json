@@ -20,8 +20,12 @@
   },
   "homepage": "https://github.com/superirale/usmantheme#readme",
   "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "browser-sync": "^2.18.5",
     "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
     "gulp-sass": "^3.0.0",
+    "gulp-uglify": "^2.0.0",
     "pump": "^1.0.2"
   }
 }
