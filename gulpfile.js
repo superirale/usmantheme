@@ -4,6 +4,7 @@ var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var pump = require('pump');
+var plumber = require('gulp-plumber');
 var browserSync = require('browser-sync').create();
 
 
