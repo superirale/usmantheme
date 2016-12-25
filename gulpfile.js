@@ -7,8 +7,6 @@ var pump = require('pump');
 var browserSync = require('browser-sync').create();
 
 
-
-
 gulp.task('browserSync', function() {
   browserSync.init({
     server: {
@@ -17,16 +15,35 @@ gulp.task('browserSync', function() {
   });
 });
 
-gulp.task('sass', function() {
-  return gulp.src('app/scss/**/*.scss') // Gets all files ending with .scss in app/scss
-    .pipe(sass())
-    .pipe(gulp.dest('app/css'))
-    .pipe(browserSync.reload({
+gulp.task('sass', function(cb) {
+//   return gulp.src('app/scss/**/*.scss') // Gets all files ending with .scss in app/scss
+//     .pipe(sass())
+//     .pipe(gulp.dest('app/css'))
+//     .pipe(browserSync.reload({
+//       stream: true
+//     }));
+// }
+  pump([
+    gulp.src(['app/scss/**/*.scss', 'app/scss/*.scss']),
+    plumber(),
+    sass(),
+    gulp.dest('app/css'),
+    browserSync.reload({
       stream: true
-    }));
+    })
+    ], cb);
 });
 
 gulp.task('watch', ['browserSync'], function (){
-  gulp.watch('app/scss/**/*.scss', ['sass']);
+  gulp.watch(['app/scss/**/*.scss', 'app/scss/*.scss'], ['sass']);
   // Other watchers
 });
+
+// gulp.task('default', function(cb){
+//   pump([
+//         gulp.src(['app/scss/style.scss']),
+//           plumber(),
+//           sass({outputStyle: 'compressed'}),
+//           gulp.dest('dist/stylesheet')
+//       ], cb);
+// });
