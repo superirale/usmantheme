@@ -1,12 +1,44 @@
 .profile{
-	margin-top: 30px;
-	background: pink;
+	margin: 100px auto;
+    max-width: 600px;
 }
 
 .profile-image{
+	margin: 0 auto;
+    max-width: 350px;
+    width: 300px;
+    text-align: center;
+	img{
+		width: 100%;
+		border-radius: 100%;
+	}
+}
+.profile-name{
+	color: $white;
+	font-weight: 600;
+	text-align: center;
+}
+
+.profile-description {
 
 }
 
-.profile-social-account{
-
+.profile-social-accounts{
+	ul{
+		list-style: none;
+	    margin: 0;
+	    padding: 0;
+	    // width: 400px;
+		li {
+			display: inline;
+			float: left;
+			a{
+				display: block;
+				padding: 5px;
+				&:hover{
+					color: $white;
+				}
+			}
+		}
+	}
 }

@@ -1,3 +1,6 @@
 @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap-sprockets.scss";
+@import "./node_modules/font-awesome/scss/font-awesome.scss";
 @import '_bootstrap_custom';
+@import 'modules/settings';
+@import 'modules/menu';
 @import 'modules/profile';
