@@ -8193,8 +8193,14 @@ button.close {
   max-width: 700px;
   padding: 20px 40px; }
 
-.post h1 a, .post h2 a, .post h3 a, .post h4 a, .post h5 a {
-  color: #1d4e61; }
+.post h1, .post h2, .post h3, .post h4, .post h5 {
+  font-size: 40px; }
+  .post h1 a, .post h2 a, .post h3 a, .post h4 a, .post h5 a {
+    color: #1d4e61;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: 5px 0 0 transparent; }
 
 .post p {
   margin-bottom: 0.8em;
