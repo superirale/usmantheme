@@ -8144,11 +8144,21 @@ button.close {
     display: none !important; } }
 
 .bg {
-  background: #3E8BA8; }
+  background: #429abf; }
 
 .fa {
   color: #1d4e61;
   font-size: 40px; }
+  .fa:hover {
+    color: #fff; }
+
+ul.navbar li {
+  margin-top: 10px; }
+  ul.navbar li:hover {
+    background: #429abf;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 10px; }
 
 .navbar {
   border: 1px solid #50B2DE; }
@@ -8157,24 +8167,29 @@ button.close {
   background: #50B2DE; }
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
-  background: #3E8BA8; }
+  background: #429abf;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 10px; }
 
 .navbar-inverse .navbar-nav > li > a {
   color: #fff;
   font-weight: 600; }
 
 .profile {
-  margin: 100px auto;
+  margin: 250px auto;
   max-width: 600px; }
 
 .profile-image {
   margin: 0 auto;
   max-width: 350px;
-  width: 300px;
+  width: 160px;
+  height: 160px;
   text-align: center; }
   .profile-image img {
-    width: 100%;
-    border-radius: 100%; }
+    width: 160px;
+    height: 160px;
+    border-radius: 50%; }
 
 .profile-name {
   color: #fff;
@@ -8183,11 +8198,9 @@ button.close {
 
 .profile-social-accounts ul {
   list-style: none;
-  margin: 0;
-  padding: 0; }
+  text-align: center; }
   .profile-social-accounts ul li {
-    display: inline;
-    float: left; }
+    display: inline-block; }
     .profile-social-accounts ul li a {
       display: block;
       padding: 5px; }

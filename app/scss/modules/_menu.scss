@@ -1,3 +1,15 @@
+ul.navbar{
+	li{
+		margin-top: 10px;
+
+		&:hover{
+			background: $mainColour;
+			padding: 5px 10px;
+			border-radius: 5px;
+			margin-top: 10px;
+		}
+	}
+}
 .navbar{
 	// background: blue;
 	border: 1px solid $complementColour;
@@ -7,6 +19,14 @@
 }
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus{
 	background: $mainColour;
+	padding: 5px 10px;
+	border-radius: 5px;
+	margin-top: 10px;
+
+
+}
+li.active{
+		// margin-top: 10px;
 }
 .navbar-inverse .navbar-nav > li > a {
     color: #fff;
