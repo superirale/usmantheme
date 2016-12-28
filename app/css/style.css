@@ -8152,13 +8152,15 @@ button.close {
   .fa:hover {
     color: #fff; }
 
-ul.navbar li {
-  margin-top: 10px; }
-  ul.navbar li:hover {
-    background: #429abf;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin-top: 10px; }
+.navbar li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px; }
+  .navbar li a {
+    color: #fff; }
+    .navbar li a:hover, .navbar li a:focus {
+      background: #429abf;
+      border-radius: 5px; }
 
 .navbar {
   border: 1px solid #50B2DE; }
@@ -8166,11 +8168,15 @@ ul.navbar li {
 .navbar-inverse {
   background: #50B2DE; }
 
-.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+.active {
   background: #429abf;
-  padding: 5px 10px;
-  border-radius: 5px;
-  margin-top: 10px; }
+  border-radius: 5px; }
+
+.navbar-custom {
+  background: #50B2DE;
+  color: #fff; }
+  .navbar-custom:hover, .navbar-custom:focus, .navbar-custom:visited {
+    color: #fff; }
 
 .navbar-inverse .navbar-nav > li > a {
   color: #fff;
@@ -8195,6 +8201,13 @@ ul.navbar li {
   color: #fff;
   font-weight: 600;
   text-align: center; }
+
+.profile-description {
+  margin-top: 10px;
+  margin-bottom: 10px; }
+  .profile-description p {
+    text-align: center;
+    color: #fff; }
 
 .profile-social-accounts ul {
   list-style: none;
