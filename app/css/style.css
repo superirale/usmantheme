@@ -8195,6 +8195,16 @@ h1, h2, h3, h4, h5 {
   .post-date span {
     font-weight: 600; }
 
+.social-share {
+  text-align: center; }
+
+.twitter-share-button {
+  text-align: center;
+  margin: 0 auto; }
+
+.post-comment {
+  border: 1px solid #1d4e61; }
+
 .navbar li {
   margin-top: 10px;
   margin-bottom: 10px;
