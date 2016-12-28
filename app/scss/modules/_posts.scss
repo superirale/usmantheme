@@ -1,0 +1,27 @@
+.posts{
+	margin: 80px auto;
+    max-width: 700px;
+    padding: 20px 40px;
+}
+
+.post{
+	h1,h2,h3,h4,h5{
+		a{
+			color: $shadeColour;
+		}
+	}
+	p{
+		margin-bottom: 0.8em;
+    	line-height: 1.6em;
+	}
+	hr{
+		margin: 64px auto;
+		width: 20%;
+		height: 1px;
+	}
+}
+.post-date{
+	span{
+		font-weight: 600;
+	}
+}
