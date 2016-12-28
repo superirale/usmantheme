@@ -1,0 +1,31 @@
+.blog-post{
+	margin: 80px auto;
+    max-width: 700px;
+    padding: 20px 40px;
+}
+.post-header{
+	h1,h2,h3,h4,h5{
+		font-size: 40px;
+			margin-bottom: 20px;
+		color: $shadeColour;
+	}
+}
+.post-body{
+	margin-bottom: 20px;
+
+	p{
+		margin-bottom: 0.8em;
+    	line-height: 1.6em;
+	}
+	hr{
+		margin: 64px auto;
+		width: 20%;
+		height: 1px;
+	}
+}
+.post-date{
+	margin-bottom: 20px;
+	span{
+		font-weight: 600;
+	}
+}
