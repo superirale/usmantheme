@@ -8268,7 +8268,7 @@ h1, h2, h3, h4, h5 {
   max-width: 350px; }
 
 .profile-image {
-  margin: 0 auto 20px; }
+  margin: 0 auto 10px; }
   .profile-image img {
     width: 160px;
     height: 160px;
@@ -8277,8 +8277,10 @@ h1, h2, h3, h4, h5 {
 .profile-name {
   margin-bottom: 20px;
   color: #fff;
-  font-weight: 600;
   text-align: center; }
+  .profile-name h1, .profile-name h2, .profile-name h3, .profile-name h4, .profile-name h5 {
+    margin-top: 20px;
+    font-weight: 700; }
 
 .profile-description {
   margin-bottom: 10px; }

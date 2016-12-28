@@ -6,7 +6,7 @@
 }
 
 .profile-image{
-	margin: 0 auto 20px;
+	margin: 0 auto 10px;
 
 	img{
 		width: 160px;
@@ -18,8 +18,11 @@
 
 	margin-bottom: 20px;
 	color: $white;
-	font-weight: 600;
 	text-align: center;
+	h1,h2,h3,h4,h5{
+		margin-top: 20px;
+		font-weight: 700;
+	}
 }
 
 .profile-description {
