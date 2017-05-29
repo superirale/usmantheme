@@ -13,8 +13,12 @@ body{
 	background: $mainColour;
 }
 a{
-	&:hover,&:visited{
+	&:hover,&:active,&:focus{
 		color: $mainColour;
+	}
+
+	&:visited{
+		color: $white;
 	}
 }
 .bg-white{
