@@ -12,6 +12,11 @@ body{
 .bg{
 	background: $mainColour;
 }
+a{
+	&:hover,&:visited{
+		color: $mainColour;
+	}
+}
 .bg-white{
 	background: $white;
 }
