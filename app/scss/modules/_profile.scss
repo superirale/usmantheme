@@ -34,11 +34,13 @@
 }
 
 .profile-social-accounts{
+	 margin-top: 40px;
+
 	ul{
 		list-style: none;
-	    margin-top: 40px;
-	    // padding: 0;
-	    // width: 400px;
+	        width: 78%;
+    		margin: auto;
+
 		li {
 			display: inline-block;
 			float: left;

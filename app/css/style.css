@@ -8300,14 +8300,17 @@ h1, h2, h3, h4, h5 {
   .profile-description p {
     color: #fff; }
 
-.profile-social-accounts ul {
-  list-style: none;
+.profile-social-accounts {
   margin-top: 40px; }
-  .profile-social-accounts ul li {
-    display: inline-block;
-    float: left; }
-    .profile-social-accounts ul li a {
-      display: block;
-      padding: 15px; }
-      .profile-social-accounts ul li a:hover {
-        color: #fff; }
+  .profile-social-accounts ul {
+    list-style: none;
+    width: 78%;
+    margin: auto; }
+    .profile-social-accounts ul li {
+      display: inline-block;
+      float: left; }
+      .profile-social-accounts ul li a {
+        display: block;
+        padding: 15px; }
+        .profile-social-accounts ul li a:hover {
+          color: #fff; }
