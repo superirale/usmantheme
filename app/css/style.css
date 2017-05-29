@@ -8235,6 +8235,19 @@ h1, h2, h3, h4, h5 {
   color: #fff;
   font-weight: 600; }
 
+.icon-bar {
+  background: #fff; }
+
+.navbar-toggle {
+  border: 1px solid #fff;
+  margin-top: 18px; }
+
+.name {
+  margin: 10px 0;
+  font-weight: 600;
+  color: #fff;
+  font-size: 28px; }
+
 .posts {
   margin: 80px auto;
   max-width: 700px;

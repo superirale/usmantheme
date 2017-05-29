@@ -7,6 +7,10 @@ var pump = require('pump');
 var plumber = require('gulp-plumber');
 var browserSync = require('browser-sync').create();
 
+var config = {
+     nodeDir: './node_modules' 
+}
+
 
 gulp.task('browserSync', function() {
   browserSync.init({
@@ -35,7 +39,24 @@ gulp.task('sass', function(cb) {
     ], cb);
 });
 
+gulp.task('compress', function (cb) {
+  pump([
+        gulp.src([
+                config.nodeDir + '/jquery/dist/jquery.min.js',
+                './app/scripts/script.js',
+                config.bonodeDirwerDir + '/bootstrap-sass/assets/javascripts/bootstrap.min.js',
+                ]),
+        plumber(),
+        uglify(),
+        concat({ path: 'app.min.js', stat: { mode: 0666 }}),
+        gulp.dest('app/js')
+    ],
+    cb
+  );
+});
+
 gulp.task('watch', ['browserSync'], function (){
+  gulp.watch(['app/script/*.js'], ['compress']);
   gulp.watch(['app/scss/**/*.scss', 'app/scss/*.scss'], ['sass']);
   gulp.watch(['app/scss/**/*.scss', 'app/scss/*.scss', 'app/*.html']).on('change', browserSync.reload);
 });
