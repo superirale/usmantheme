@@ -8152,6 +8152,12 @@ body {
 .bg {
   background: #fda1ae; }
 
+a:hover, a:active, a:focus {
+  color: #fda1ae; }
+
+a:visited {
+  color: #fff; }
+
 .bg-white {
   background: #fff; }
 

@@ -12,6 +12,15 @@ body{
 .bg{
 	background: $mainColour;
 }
+a{
+	&:hover,&:active,&:focus{
+		color: $mainColour;
+	}
+
+	&:visited{
+		color: $white;
+	}
+}
 .bg-white{
 	background: $white;
 }
