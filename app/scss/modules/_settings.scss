@@ -1,6 +1,6 @@
-$mainColour : #429abf; //3E8BA8
-$complementColour : #50B2DE;
-$shadeColour: #1d4e61;
+$mainColour : #fda1ae; //3E8BA8
+$complementColour : #FFB6C1;
+$shadeColour: #ad3e4e;
 $white: #fff;
 
 body{
@@ -16,7 +16,7 @@ body{
 	background: $white;
 }
 .fa {
-	color: #1d4e61;
+	color: #ad3e4e;
 	font-size: 40px;
 	&:hover{
 		color: $white;

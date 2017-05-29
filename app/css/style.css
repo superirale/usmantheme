@@ -8150,13 +8150,13 @@ body {
   -webkit-font-smoothing: antialiased; }
 
 .bg {
-  background: #429abf; }
+  background: #fda1ae; }
 
 .bg-white {
   background: #fff; }
 
 .fa {
-  color: #1d4e61;
+  color: #ad3e4e;
   font-size: 40px; }
   .fa:hover {
     color: #fff; }
@@ -8178,7 +8178,7 @@ h1, h2, h3, h4, h5 {
 .post-header h1, .post-header h2, .post-header h3, .post-header h4, .post-header h5 {
   font-size: 40px;
   margin-bottom: 20px;
-  color: #1d4e61; }
+  color: #ad3e4e; }
 
 .post-body {
   margin-bottom: 20px; }
@@ -8203,7 +8203,7 @@ h1, h2, h3, h4, h5 {
   margin: 0 auto; }
 
 .post-comment {
-  border: 1px solid #1d4e61; }
+  border: 1px solid #ad3e4e; }
 
 .navbar li {
   margin-top: 10px;
@@ -8212,21 +8212,21 @@ h1, h2, h3, h4, h5 {
   .navbar li a {
     color: #fff; }
     .navbar li a:hover, .navbar li a:focus {
-      background: #429abf;
+      background: #fda1ae;
       border-radius: 5px; }
 
 .navbar {
-  border: 1px solid #50B2DE; }
+  border: 1px solid #FFB6C1; }
 
 .navbar-inverse {
-  background: #50B2DE; }
+  background: #FFB6C1; }
 
 .active {
-  background: #429abf;
+  background: #fda1ae;
   border-radius: 5px; }
 
 .navbar-custom {
-  background: #50B2DE;
+  background: #FFB6C1;
   color: #fff; }
   .navbar-custom:hover, .navbar-custom:focus, .navbar-custom:visited {
     color: #fff; }
@@ -8256,7 +8256,7 @@ h1, h2, h3, h4, h5 {
 .post h1, .post h2, .post h3, .post h4, .post h5 {
   font-size: 40px; }
   .post h1 a, .post h2 a, .post h3 a, .post h4 a, .post h5 a {
-    color: #1d4e61;
+    color: #ad3e4e;
     background-color: transparent;
     padding: 0;
     border-radius: 0;
