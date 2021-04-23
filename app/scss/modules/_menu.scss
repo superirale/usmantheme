@@ -19,18 +19,20 @@
 .navbar{
 	// background: blue;
 	border: 1px solid $complementColour;
+	border: none;
 }
 .navbar-inverse{
 	background: $complementColour;
 }
 .active{
 	background: $mainColour;
-	// padding: 5px 10px;
 	border-radius: 5px;
 }
 .navbar-custom{
 	background: $complementColour;
 	color: $white;
+
+    // border-bottom: 1px solid #124f67;
 	&:hover,&:focus,&:visited{
 		color: $white;
 	}

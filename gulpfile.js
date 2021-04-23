@@ -1,5 +1,5 @@
 // Include gulp
-var gulp = require('gulp');
+var { dest, series, src, watch } = require('gulp');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
@@ -8,64 +8,84 @@ var plumber = require('gulp-plumber');
 var browserSync = require('browser-sync').create();
 
 var config = {
-     nodeDir: './node_modules' 
+    nodeDir: './node_modules'
+}
+function browserSyncServe(cb){
+    browserSync.init({
+      server: {
+        baseDir: './app'
+      }    
+    });
+    cb();
+  }
+
+function browserSyncReload(cb){
+    browserSync.reload();
+    cb();
 }
 
+function scssTask(cb) {
 
-gulp.task('browserSync', function() {
-  browserSync.init({
-    server: {
-      baseDir: 'app'
-    },
-  });
-});
+    pump([
+      src(['app/scss/**/*.scss', 'app/scss/*.scss']),
+      plumber(),
+      sass(),
+      dest('app/css'),
+      browserSync.reload({
+        stream: true
+      })
+      ], cb);
+  }
+  function compressTask(cb) {
+    pump([
+          src([
+                  config.nodeDir + '/jquery/dist/jquery.min.js',
+                  './app/scripts/script.js',
+                  config.nodeDir + '/bootstrap-sass/assets/javascripts/bootstrap.min.js',
+                  ]),
+          plumber(),
+          uglify(),
+          concat({ path: 'app.min.js', stat: { mode: 0666 }}),
+          dest('app/js')
+      ],
+      cb
+    );
+  }
 
-gulp.task('sass', function(cb) {
-//   return gulp.src('app/scss/**/*.scss') // Gets all files ending with .scss in app/scss
-//     .pipe(sass())
-//     .pipe(gulp.dest('app/css'))
-//     .pipe(browserSync.reload({
-//       stream: true
-//     }));
-// }
-  pump([
-    gulp.src(['app/scss/**/*.scss', 'app/scss/*.scss']),
-    plumber(),
-    sass(),
-    gulp.dest('app/css'),
-    browserSync.reload({
-      stream: true
-    })
-    ], cb);
-});
 
-gulp.task('compress', function (cb) {
-  pump([
-        gulp.src([
-                config.nodeDir + '/jquery/dist/jquery.min.js',
-                './app/scripts/script.js',
-                config.bonodeDirwerDir + '/bootstrap-sass/assets/javascripts/bootstrap.min.js',
-                ]),
-        plumber(),
-        uglify(),
-        concat({ path: 'app.min.js', stat: { mode: 0666 }}),
-        gulp.dest('app/js')
-    ],
-    cb
+
+
+// gulp.task('default', gulp.series('sass', 'compress', 'browserSync'))
+
+//   gulp.task('watch', gulp.series('browserSync', (done) => {
+
+//     // compress changes
+//     gulp.watch(['app/script/*.js'], gulp.series('compress'));
+  
+//     // CSS changes
+//     gulp.watch(['app/scss/**/*.scss', 'app/scss/*.scss'], gulp.series('sass'));
+
+//     gulp.watch(['app/scss/**/*.scss', 'app/scss/*.scss', 'app/*.html']).on('change', browserSync.reload);
+  
+//     done();
+  
+//   }));
+
+function watchTask(){
+    watch('app/*.html', browserSyncReload);
+    watch([
+        'app/script/*.js', 
+        'app/scss/**/*.scss', 
+        'app/scss/*.scss', 
+        'app/scss/**/*.scss', 
+        'app/scss/*.scss'
+    ], series(scssTask, compressTask, browserSyncReload));
+}
+
+// Default Gulp Task
+exports.default = series(
+    scssTask,
+    compressTask,
+    browserSyncServe,
+    watchTask
   );
-});
-
-gulp.task('watch', ['browserSync'], function (){
-  gulp.watch(['app/script/*.js'], ['compress']);
-  gulp.watch(['app/scss/**/*.scss', 'app/scss/*.scss'], ['sass']);
-  gulp.watch(['app/scss/**/*.scss', 'app/scss/*.scss', 'app/*.html']).on('change', browserSync.reload);
-});
-
-// gulp.task('default', function(cb){
-//   pump([
-//         gulp.src(['app/scss/style.scss']),
-//           plumber(),
-//           sass({outputStyle: 'compressed'}),
-//           gulp.dest('dist/stylesheet')
-//       ], cb);
-// });

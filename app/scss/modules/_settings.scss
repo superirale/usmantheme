@@ -1,10 +1,23 @@
-$mainColour : #429abf; //3E8BA8
-$complementColour : #50B2DE;
+$mainColour : #0a1c23; //3E8BA8
+$complementColour : #010506;
 $shadeColour: #1d4e61;
-$white: #fff;
+$white: #ffffff;
+@font-face {
+	font-family: "Roboto";
+	src: url("fonts/Roboto-Regular.ttf") format("ttf");
+	font-style: normal;
+	font-size: 400;
+}
+
+@font-face {
+	font-family: "Rubik";
+	src: url("fonts/Roboto-SemiBold.ttf") format("ttf");
+	font-style: normal;
+	font-size: 700;
+}
 
 body{
-	font-family: "Source Sans Pro", sans-serif;
+	font-family: "Roboto", sans-serif;
     color: #333;
     font-size: 20px;
     -webkit-font-smoothing: antialiased;
@@ -25,7 +38,7 @@ a{
 	background: $white;
 }
 .fa {
-	color: #1d4e61;
+	color: #010506;
 	font-size: 40px;
 	&:hover{
 		color: $white;
@@ -37,8 +50,7 @@ a{
 }
 
 h1,h2,h3,h4,h5{
-	font-family: "Source Sans Pro", sans-serif;
-	font-weight: 400;
+	font-family: "Rubik", sans-serif;
     line-height: 1.25;
     margin: 1.5em 0 0.25em;
 }
