@@ -4,7 +4,10 @@
   "description": "theme for usman.com.ng",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "start": "nuxt start"
   },
   "repository": {
     "type": "git",
@@ -20,6 +23,7 @@
   },
   "homepage": "https://github.com/superirale/usmantheme#readme",
   "dependencies": {
+    "bootstrap": "^3.4.1",
     "bootstrap-sass": "^3.3.7",
     "browser-sync": "^2.18.5",
     "font-awesome": "^4.7.0",
@@ -29,6 +33,7 @@
     "gulp-sass": "^3.0.0",
     "gulp-uglify": "^2.0.0",
     "jquery": "^3.2.1",
+    "nuxt": "^2.15.4",
     "pump": "^1.0.2"
   }
 }

@@ -2569,8 +2569,8 @@ th {
 
 @font-face {
   font-family: "Glyphicons Halflings";
-  src: url(font-path("bootstrap/glyphicons-halflings-regular.eot"));
-  src: url(font-path("bootstrap/glyphicons-halflings-regular.eot?#iefix")) format("embedded-opentype"), url(font-path("bootstrap/glyphicons-halflings-regular.woff2")) format("woff2"), url(font-path("bootstrap/glyphicons-halflings-regular.woff")) format("woff"), url(font-path("bootstrap/glyphicons-halflings-regular.ttf")) format("truetype"), url(font-path("bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular")) format("svg"); }
+  src: url(font-path("~bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.eot"));
+  src: url(font-path("~bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix")) format("embedded-opentype"), url(font-path("~bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff2")) format("woff2"), url(font-path("~bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff")) format("woff"), url(font-path("~bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf")) format("truetype"), url(font-path("~bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular")) format("svg"); }
 
 .glyphicon {
   position: relative;
@@ -8117,13 +8117,13 @@ button.close {
 
 @font-face {
   font-family: "Roboto";
-  src: url("fonts/Roboto-Regular.ttf") format("ttf");
+  src: url("../../fonts/Roboto/Roboto-Regular.ttf") format("ttf");
   font-style: normal;
   font-size: 400; }
 
 @font-face {
   font-family: "Rubik";
-  src: url("fonts/Roboto-SemiBold.ttf") format("ttf");
+  src: url("../../fonts/Rubik/static/Rubik-SemiBold.ttf") format("ttf");
   font-style: normal;
   font-size: 700; }
 
